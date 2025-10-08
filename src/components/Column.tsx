@@ -60,7 +60,7 @@ const Column: React.FC<ColumnProps> = ({
       </div>
 
       <div
-        className={`min-h-[500px] space-y-2 rounded-lg p-2 ${
+        className={`min-h-[500px]  flex flex-col gap-[10px] rounded-lg p-2 ${
           isDraggedOver ? 'bg-blue-50 dark:bg-gray-700' : ''
         }`}
       >

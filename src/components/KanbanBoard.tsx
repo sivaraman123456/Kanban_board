@@ -16,10 +16,10 @@ import {
   searchTasks
 } from '../utils/helpers';
 
+
 const KanbanBoard: React.FC = () => {
   const dispatch = useDispatch();
   const { tasks, columns, darkMode } = useSelector((state: RootState) => state.kanban);
-
   const [searchTerm, setSearchTerm] = useState('');
   const [filter, setFilter] = useState<FilterType>('all');
   const [sortBy, setSortBy] = useState<Record<ColumnId, SortType>>({
@@ -59,6 +59,7 @@ const KanbanBoard: React.FC = () => {
       })
     );
 
+    console.log(">>>>",task,sourceColumn,destIndex,draggedTask);
     setDraggedTask(null);
     setDraggedOverColumn(null);
   };
